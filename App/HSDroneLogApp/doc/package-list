@@ -1,0 +1,14 @@
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.accumulator_view
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.checklist_view
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.dashboard_view
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.drone_view
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.externalFileManagement
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.flight_view
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.login_view
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.network
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.network.request
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.network.request.parser
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.network.util
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.network.util.json
+de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog.user_view

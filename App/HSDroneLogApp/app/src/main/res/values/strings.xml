@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">HSDroneLog</string>
+    <!-- Login activity-->
+    <string name="activity_login">Login</string>
+    <string name="login_password">Passwort</string>
+    <string name="loginButton">Anmelden</string>
+    <string name="forgotPassword_button">Passwort vergessen?</string>
+    <string name="register_button">Registrieren</string>
+    <string name="picture_description">Strand</string>
+    <string name="title_activity_dashboard_activity">HSDroneLog</string>
+    <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
+    <string name="navigation_drawer_close">Navigationsmenü schliessen</string>
+    <string name="nav_header_title">Beispiel</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Nachrichten bearbeiten</string>
+    <string name="logo_description">App Logo</string>
+    <string name="yes">Ja</string>
+    <string name="noDoNotWant">Nein</string>
+    <string name="networkError">Netzwerkfehler</string>
+    <string name="tryAgain">Erneut versuchen</string>
+
+    <!-- Register activity -->
+    <string name="name">Vorname</string>
+    <string name="surname">Nachname</string>
+    <string name="curse">Studiengang</string>
+    <string name="email">E-Mail</string>
+
+    <!-- Dashboard activity-->
+    <string name="homeNavigation_title">Dashboard</string>
+    <string name="flightNavigation_title">Flüge</string>
+    <string name="droneNavigation_title">Drohnen</string>
+    <string name="checklist_title">Checklisten</string>
+    <string name="accu_title">Akku</string>
+    <string name="logoutButton">Abmelden</string>
+    <string name="userItem">Benutzer</string>
+    <string name="flightsToday">Meine heutigen Flüge</string>
+    <string name="longestFlightTimes">Längste Flugzeiten</string>
+    <string name="pastFlights">Vergangene Flüge</string>
+    <string name="plannedFlights">Geplante Flüge</string>
+    <string name="pilotOfTheWeek">Pilot der Woche</string>
+
+    <!-- Dashboard fragment-->
+    <string name="flightsUntilNow">Karte mit bisherigen Flügen</string>
+    <string name="lastFlight">Letzter Flug</string>
+    <string name="newFlight">Neuen Flug anlegen</string>
+    <string name="reserveDrone">Drohne reservieren</string>
+    <string name="position">Position:</string>
+    <string name="flightNumber">Flugnummer</string>
+    <string name="firstSteps">Erste Schritte</string>
+    <string name="firstStepsExspanded">Willkommen bei HSDroneLog!\nÖffnen sie das Menü links um ihre Flüge zu verwalten, Drohnen zu buchen oder sich auf einen Flug mit Checklisten
+    vorzubereiten.\nDies ist das Dashboard, es versorgt sie mit vielen Informationen zu ihren Flügen!</string>
+    <string name="pieChart">Beliebteste Drohnen</string>
+    <string name="flightswithoutDrones">Flüge ohne Drohnen</string>
+    <string name="stmpserver">STMP-Server</string>
+    <string name="port">Port</string>
+    <!-- flight fragment -->
+    <string name="id">ID</string>
+    <string name="pilot">Pilot</string>
+    <string name="drone">Drohne</string>
+    <string name="date">Datum</string>
+    <string name="flightLocation">Einsatzort</string>
+    <string name="flighttimeBegin">Einsatzbeginn</string>
+    <string name="flighttimeEnd">Einsatzende</string>
+    <string name="viewFlight">Flug anschauen</string>
+    <string name="editFlight">Flug bearbeiten</string>
+    <string name="confirmEdit">Editierung abschliessen</string>
+    <string name="flightErrorSnackBar">Hier ist etwa mit dem Netzwerk schiefgelaufen!</string>
+    <string name="checklistFlight">Checkliste</string>
+    <string name="flightDescription">Flugbezeichnung</string>
+    <string name="flightExtraDescription">Besondere Vorkommnisse</string>
+    <string name="setTImeDate">Datum und Zeit setzen</string>
+    <string name="checklistSave">Checkliste Speichern</string>
+    <!-- Flightlog Hochladen -->
+    <string name="flightLogUpload">DJI Flightlog hochladen</string>
+    <string name="next">Weiter ></string>
+    <string name="uploadDjiFlightLogIntro">Hallo! In diesem Tutorial wird ihnen erklärt wie man ein DJI-Flightlog eines Fluges in einen Flug einbindet. Drücken sie auf "Weiter" um anzufangen!</string>
+    <string name="chromeTuroial">Drücken sie auf den Button und laden sie ihr Flightlog auf der Website hoch. Dieses wird unter DJI>dji.go.v4>FlightRecord gespeichert! Falls sie eine ältere Version verwenden, befindet es sich unter DJI>DJI.Pilot>FlightRecord. Laden sie das umgewandelte Log herunter.</string>
+    <string name="openChrome">Chrome öffnen</string>
+    <string name="uploadTuroial">Drücken sie auf den Button und wählen sie ihre heruntergeladene Datei aus. Diese wird dann mit ihrem DroneLog Flug vernküpft!</string>
+    <string name="uploadLog">Log auswählen</string>
+    <string name="finish">Beenden</string>
+    <string name="showFlightlog">Flightlog Anschauen</string>
+    <!-- drone fragment -->
+    <string name="picture">Bild</string>
+    <string name="description">Beschreibung</string>
+    <string name="weightInGramm">Gewicht in Gramm</string>
+    <string name="sizeDiagonal">Diagonale Größe in Millimetern</string>
+    <string name="maxFlightTime">Maximale Flugzeit in Minuten</string>
+    <string name="maxFlightHeigth">Maximale Flughöhe in Metern</string>
+    <string name="maxSpeedInKmH">Höchstgeschwindigkeit in Km/h</string>
+    <string name="lookupDrone">Drohne anschauen</string>
+    <string name="editDrone">Drohne bearbeiten</string>
+    <string name="createDrone">Drohne erstellen</string>
+    <string name="noTimeSelected">Bitte wählen sie erst Datum und Zeit!</string>
+
+    <!-- Password activity-->
+    <string name="confirmPassword">Jetzt zurücksetzen!</string>
+    <string name="confrimPasswordMessage">Ihre anfrage wird Bearbeitet! Sie erhalten in kürze eine Email mit weiteren Instruktionen.</string>
+
+    <!-- Accu fragment -->
+    <string name="accumulatorDescription">Bezeichnung</string>
+    <string name="accumulatorNumber">Anzahl an Akkus</string>
+    <string name="editAccuTable">Bearbeiten ></string>
+    <string name="viewAccuTable">Details ></string>
+    <string name="pairedDrones">Passt zu folgenden Drohnen:</string>
+
+    <!--- checklist fragment-->
+    <string name="checklist">Checkliste</string>
+    <string name="explanation">Erklärung</string>
+    <string name="checklistName">Name der Liste</string>
+    <string name="checklistItems">Checklistenitems</string>
+    <string name="editElements">Elemente bearbeiten</string>
+    <string name="createElement">Neues Element erstellen</string>
+
+    <!-- User activity -->
+    <string name="adminUserSwitch">Administrator</string>
+    <string name="openImageGalleryUserPicture">Bild wählen</string>
+    <string name="rotatePicture">Bild um 90 Grad nach rechts drehen</string>
+    <string name="activeUser">Inaktiv</string>
+
+    <!-- Login Settings Activity -->
+    <string name="serverURL">Server Adresse(URL)</string>
+    <string name="saveTheUsername">Benutzernamen speichern</string>
+    <string name="saveURL">URL Speichern</string>
+    <string name="showDialog">Dialog zum Speichern anzeigen</string>
+    <string name="deleteAlreadySavedName">Aktuell gespeicherten Namen löschen</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="adress">Adresse</string>
+    <string name="title_activity_user_view_activity">User_view_activity</string>
+</resources>

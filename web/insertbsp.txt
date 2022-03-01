@@ -1,0 +1,2 @@
+INSERT INTO `Pilot`(`pilot_id`,`email_adresse`, `passwort`, `vorname`, `nachname`, `studiengang`, `rolle`, `loeschberechtigung`,  `aktivitaet`) VALUES ('99', 'admin@dronelog.de', 'mein', 'test', 'acc', 'bmi' , '0' , '0', '0')
+

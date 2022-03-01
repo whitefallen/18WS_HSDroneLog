@@ -1,0 +1,10 @@
+<html lang="de">
+<head>
+    <title></title>
+</head>
+<body>
+<main>
+    <?php var_dump($data); ?>
+</main>
+</body>
+</html>

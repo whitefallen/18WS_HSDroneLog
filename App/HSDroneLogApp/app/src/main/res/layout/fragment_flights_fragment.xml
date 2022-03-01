@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flight_view.Flights_fragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarFlightsFragment"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabButtonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_add_white_24dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TableLayout
+                    android:id="@+id/flightTableLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:id="@+id/headerRowFlights"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/flightIDText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/pilotFlightText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flighttimeBegin"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/droneFlightText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flightLocation"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/pilotFlightRow"
+                            android:layout_width="51dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/drone"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/headerRowFlights2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/locationTableName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pilot"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/flightTimeEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flighttimeEnd"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/streedFlightRow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flightDescription"
+                            android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/spaceFlights"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+</RelativeLayout>

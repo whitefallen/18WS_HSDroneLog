@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_view.Register_activity">
+
+    <ImageView
+        android:id="@+id/loginBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/picture_description"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/whiteBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backgroundPassword2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/background" />
+
+    <ImageView
+        android:id="@+id/blackBackgroundPassword2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".60"
+        app:srcCompat="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                style="@android:style/Widget.Material.ImageButton"
+                android:layout_width="46dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="544dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/registerEmail"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/registerCurse"
+                    tools:layout_editor_absoluteX="110dp" />
+
+                <EditText
+                    android:id="@+id/registerPassword"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/login_password"
+                    android:inputType="textPassword"
+                    app:layout_constraintBottom_toTopOf="@+id/registerName"
+                    tools:layout_editor_absoluteX="104dp" />
+
+                <EditText
+                    android:id="@+id/registerName"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toTopOf="@+id/registerSurname"
+                    tools:layout_editor_absoluteX="110dp" />
+
+                <EditText
+                    android:id="@+id/registerSurname"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/surname"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="110dp"
+                    tools:layout_editor_absoluteY="244dp" />
+
+                <EditText
+                    android:id="@+id/registerCurse"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/curse"
+                    android:inputType="textPersonName"
+                    app:layout_constraintTop_toBottomOf="@+id/registerSurname"
+                    tools:layout_editor_absoluteX="110dp" />
+
+                <Button
+                    android:id="@+id/final_register_button"
+                    android:layout_width="196dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/register_button"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/registerEmail"
+                    tools:layout_editor_absoluteX="133dp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.hs_duesseldorf.medien.mi.httphsdronelog.hsdronelog">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".flight_view.Show_flightlog_activity"></activity>
+        <activity android:name=".flight_view.Flightlog_upload_activity" />
+        <activity android:name=".login_view.Login_settings_activity" />
+        <activity android:name=".checklist_view.ChecklistElement_view_activity" />
+        <activity android:name=".checklist_view.Checklist_view_activity" />
+        <activity android:name=".Login_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dashboard_view.Dashboard_activity"
+            android:label="@string/title_activity_dashboard_activity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".login_view.Register_activity" />
+        <activity android:name=".login_view.Forgot_password_activity" />
+        <activity android:name=".flight_view.Flights_view_activity" />
+        <activity android:name=".drone_view.Drone_view_activity" />
+        <activity android:name=".accumulator_view.Accumulator_view_activity" />
+        <activity android:name=".dashboard_view.Settings_dashboard_activity" />
+        <activity
+            android:name=".user_view.User_view_activity"
+            android:label="@string/title_activity_user_view_activity"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

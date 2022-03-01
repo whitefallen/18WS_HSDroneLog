@@ -1,0 +1,2383 @@
+{
+	"info": {
+		"_postman_id": "6652c35d-2d38-427d-ba80-fa6ea5f229b5",
+		"name": "DroneLog",
+		"description": "# Überblick über die DroneLog API\nAlle anfragen die von der Mobile App an die API gehen werden hier beschrieben.\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "flight",
+			"item": [
+				{
+					"name": "/flight/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "Offsets the Result Data by x Amount",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/flight/index",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"flight",
+								"index"
+							]
+						},
+						"description": "Gibt alle Flüge aus der Datenbank zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/flight/show/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/flight/show/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"flight",
+								"show",
+								"{{$id}}"
+							]
+						},
+						"description": "Gibt Daten zu genau einem Flug zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/flight/add_flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "pilot_id",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "drohne_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "flugbezeichnung",
+									"value": "irgendeintext",
+									"type": "text"
+								},
+								{
+									"key": "einsatzort_name",
+									"value": "PostmanAPI",
+									"type": "text"
+								},
+								{
+									"key": "flugdatum",
+									"value": "2019-01-30",
+									"type": "text"
+								},
+								{
+									"key": "einsatzende",
+									"value": "10:50",
+									"type": "text"
+								},
+								{
+									"key": "einsatzbeginn",
+									"value": "10:00",
+									"type": "text"
+								},
+								{
+									"key": "checkliste_name_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "besondere_vorkommnisse",
+									"value": "irgendeintext",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/flight/add_flight",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"flight",
+								"add_flight"
+							]
+						},
+						"description": "Route zum hinzufügen eines Fluges"
+					},
+					"response": []
+				},
+				{
+					"name": "/flight/delete_flight/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/flight/delete_flight/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"flight",
+								"delete_flight",
+								"{{$id}}"
+							]
+						},
+						"description": "Löscht einen Flug aus der Datenbank anhand einer ID"
+					},
+					"response": []
+				},
+				{
+					"name": "/flight/edit_flight/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "pilot_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "drohne_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "flugbezeichnung",
+									"value": "Wölfe finden",
+									"type": "text"
+								},
+								{
+									"key": "einsatzort_name",
+									"value": "PostmanAPI",
+									"type": "text"
+								},
+								{
+									"key": "flugdatum",
+									"value": "20-12-1995",
+									"type": "text"
+								},
+								{
+									"key": "einsatzbeginn",
+									"value": "08:20",
+									"type": "text"
+								},
+								{
+									"key": "einsatzende",
+									"value": "13:50",
+									"type": "text"
+								},
+								{
+									"key": "checkliste_name_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "besondere_vorkommnisse",
+									"value": "Wölfe gefunden",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/flight/edit_flight/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"flight",
+								"edit_flight",
+								"{{$id}}"
+							]
+						},
+						"description": "Route zum editieren eines Fluges"
+					},
+					"response": []
+				},
+				{
+					"name": "/flight/requestAvailableDrones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "startzeit",
+									"value": "10:10:00",
+									"type": "text"
+								},
+								{
+									"key": "endzeit",
+									"value": "15:10:00",
+									"type": "text"
+								},
+								{
+									"key": "datum",
+									"value": "11.01.2019",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/flight/requestAvailableDrones",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"flight",
+								"requestAvailableDrones"
+							]
+						},
+						"description": "Route zum ermitteln aller verfügbaren Drohnen zu einem Flugzeitpunkt"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "/user/logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/logout",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"user",
+								"logout"
+							]
+						},
+						"description": "Route um ein Benutzer aus dem System auszuloggen"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/index",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/index",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"user",
+								"index"
+							]
+						},
+						"description": "Gibt die Daten fürs alle Benutzer zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/delete_user/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/delete_user/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"user",
+								"delete_user",
+								"{{$id}}"
+							]
+						},
+						"description": "Löscht einen Benutzer anhand der ID"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/edit_user/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "email_adresse",
+									"value": "test_edit@test.de",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "test_edit",
+									"type": "text"
+								},
+								{
+									"key": "vorname",
+									"value": "test_Edit",
+									"type": "text"
+								},
+								{
+									"key": "nachname",
+									"value": "test_Edit",
+									"type": "text"
+								},
+								{
+									"key": "studiengang",
+									"value": "tes",
+									"type": "text"
+								},
+								{
+									"key": "rolle",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "aktivitaet",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "IMG_TO_NAME.jpg",
+									"description": "MOBILE ONLY",
+									"type": "text"
+								},
+								{
+									"key": "profilbild",
+									"value": "bitstrom/datei",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/edit_user/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"user",
+								"edit_user",
+								"{{$id}}"
+							]
+						},
+						"description": "Route zum Bearbeiten eines Benutzers"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/add_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "email_adresse",
+									"value": "deleteme@deleteme.de",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "postman",
+									"type": "text"
+								},
+								{
+									"key": "vorname",
+									"value": "Postman",
+									"type": "text"
+								},
+								{
+									"key": "nachname",
+									"value": "API",
+									"type": "text"
+								},
+								{
+									"key": "studiengang",
+									"value": "API",
+									"type": "text"
+								},
+								{
+									"key": "rolle",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "aktivitaet",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "IMG_DT_Q.jpg",
+									"description": "MOBILE ONLY",
+									"type": "text"
+								},
+								{
+									"key": "profilbild",
+									"value": "bitstrom/datei",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/add_user",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"user",
+								"add_user"
+							]
+						},
+						"description": "Route zum Anlegen eines Benutzers"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/show/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/show/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"user",
+								"show",
+								"{{$id}}"
+							]
+						},
+						"description": "Gibt die Daten für einen Benutzer zurück"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "drone",
+			"item": [
+				{
+					"name": "/drone/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "offset",
+									"value": "1",
+									"description": "Offsets the Result Data by x Amount",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/drone/",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"drone",
+								""
+							]
+						},
+						"description": "Gibt alle Drohnen aus der Datenbank zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/drone/show/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/drone/show/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"drone",
+								"show",
+								"{{$id}}"
+							]
+						},
+						"description": "Gibt Daten zu genau einer Drohne zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/drone/add_drone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "drohnen_modell",
+									"value": "PostmanDrohne3336",
+									"type": "text"
+								},
+								{
+									"key": "fluggewicht_in_gramm",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "flugzeit_in_min",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "diagonale_groesse_in_mm",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "maximale_flughoehe_in_m",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "hoechstgeschwindigkeit_in_kmh",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "IMG_to_display.jpg",
+									"description": "MOBILE ONLY",
+									"type": "text"
+								},
+								{
+									"key": "bild",
+									"value": "bitstrom/datei",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/drone/add_drone",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"drone",
+								"add_drone"
+							]
+						},
+						"description": "Route zum hinzufügen einer Drohne"
+					},
+					"response": []
+				},
+				{
+					"name": "/drone/delete_drone/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/drone/delete_drone/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"drone",
+								"delete_drone",
+								"{{$id}}"
+							]
+						},
+						"description": "Löscht eine Drohne aus der Datenbank anhand ihrer ID"
+					},
+					"response": []
+				},
+				{
+					"name": "/drone/edit_drone/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "drohnen_modell",
+									"value": "PostmanDrohne3",
+									"type": "text"
+								},
+								{
+									"key": "fluggewicht_in_gramm",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "flugzeit_in_min",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "diagonale_groesse_in_mm",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "maximale_flughoehe_in_m",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "hoechstgeschwindigkeit_in_kmh",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "IMG_to_display.jpg",
+									"description": "MOBILE ONLY",
+									"type": "text"
+								},
+								{
+									"key": "bild",
+									"value": "bitstrom/datei",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/drone/edit_drone/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"drone",
+								"edit_drone",
+								"{{$id}}"
+							]
+						},
+						"description": "Route zum editieren einer Drohne"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "akku",
+			"item": [
+				{
+					"name": "/akku/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "offset",
+									"value": "1",
+									"description": "Offsets the Result Data by x Amount",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/akku/",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"akku",
+								""
+							]
+						},
+						"description": "Gibt alle Akkus aus der Datenbank zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/akku/show/{{id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/akku/show/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"akku",
+								"show",
+								"{{$id}}"
+							]
+						},
+						"description": "Gibt Daten zu genau einem Akku zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/akku/add_akku",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "bezeichnung",
+									"value": "PostmanAkku5",
+									"type": "text"
+								},
+								{
+									"key": "anzahl",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "drohnen[]",
+									"value": "2,3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/akku/add_akku",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"akku",
+								"add_akku"
+							]
+						},
+						"description": "Route zum hinzufügen eines Akkus"
+					},
+					"response": []
+				},
+				{
+					"name": "/akku/delete_akku/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/akku/delete_akku/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"akku",
+								"delete_akku",
+								"{{$id}}"
+							]
+						},
+						"description": "Löscht einen Akku aus der Datenbank anhand einer ID"
+					},
+					"response": []
+				},
+				{
+					"name": "/akku/edit_akku/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "bezeichnung",
+									"value": "PostmanAkku",
+									"type": "text"
+								},
+								{
+									"key": "anzahl",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "drohnen[]",
+									"value": "2,5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/akku/edit_akku/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"akku",
+								"edit_akku",
+								"{{$id}}"
+							]
+						},
+						"description": "Route zum edtieren eines Akkus"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "checklist",
+			"item": [
+				{
+					"name": "/checklist/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "offset",
+									"value": "1",
+									"description": "Offsets the Result Data by x Amount",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklist/",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklist",
+								""
+							]
+						},
+						"description": "Gibt alle Checklisten aus der Datenbank zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklist/show/{{id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklist/show/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklist",
+								"show",
+								"{{$id}}"
+							]
+						},
+						"description": "Gibt Daten zu genau einer Checkliste zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklist/add_checklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "bezeichnung",
+									"value": "Neue_Checkliste",
+									"type": "text"
+								},
+								{
+									"key": "erklaerung",
+									"value": "Generiert aus der Postman APP",
+									"type": "text"
+								},
+								{
+									"key": "elements[]",
+									"value": "4,5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklist/add_checklist",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklist",
+								"add_checklist"
+							]
+						},
+						"description": "Route zum hinzufügen einer Checkliste"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklist/delete_checklist/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklist/delete_checklist/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklist",
+								"delete_checklist",
+								"{{$id}}"
+							]
+						},
+						"description": "Löscht eine Checkliste aus der Datenbank anhand einer ID"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklist/edit_checklist/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "bezeichnung",
+									"value": "NoElement",
+									"type": "text"
+								},
+								{
+									"key": "erklaerung",
+									"value": "Checkliste für die Postman App",
+									"type": "text"
+								},
+								{
+									"key": "elements[]",
+									"value": "2,3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklist/edit_checklist/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklist",
+								"edit_checklist",
+								"{{$id}}"
+							]
+						},
+						"description": "Route zum editieren einer Checkliste"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "checklistelements",
+			"item": [
+				{
+					"name": "/checklistelement/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklistelement/",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklistelement",
+								""
+							]
+						},
+						"description": "Gibt alle Checklisten Elemente aus der Datenbank zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklistelement/show/{{id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklistelement/show/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklistelement",
+								"show",
+								"{{$id}}"
+							]
+						},
+						"description": "Gibt Daten zu genau einem Checklistenelement zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklistelement/add_element",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "bezeichnung",
+									"value": "PostmanAPIListElement2",
+									"type": "text"
+								},
+								{
+									"key": "erklaerung",
+									"value": "ChecklistElement für die Postman Api App",
+									"type": "text"
+								},
+								{
+									"key": "checklists[]",
+									"value": "2,3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklistelement/add_element",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklistelement",
+								"add_element"
+							]
+						},
+						"description": "Route zum hinzufügen eines Checklisten Elementes"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklistelement/delete_element/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklistelement/delete_element/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklistelement",
+								"delete_element",
+								"{{$id}}"
+							]
+						},
+						"description": "Löscht ein Checklisten Element aus der Datenbank anhand einer ID"
+					},
+					"response": []
+				},
+				{
+					"name": "/checklistelement/edit_element/{{$id}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "bezeichnung",
+									"value": "bezeichnung",
+									"type": "text"
+								},
+								{
+									"key": "erklaerung",
+									"value": "text",
+									"type": "text"
+								},
+								{
+									"key": "checklists[]",
+									"value": "3,7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/checklistelement/edit_element/{{$id}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"checklistelement",
+								"edit_element",
+								"{{$id}}"
+							]
+						},
+						"description": "Route zum editieren eines Elements"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "/message/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/message/",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"message",
+								""
+							]
+						},
+						"description": "Gibt alle Nachrichten aus der Datenbank zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/message/show/{{$message_key}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/message/show/{{$message_key}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"message",
+								"show",
+								"{{$message_key}}"
+							]
+						},
+						"description": "Gibt Daten zu genau einer Nachricht zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/message/edit_message/{{$message_key}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								},
+								{
+									"key": "nachricht",
+									"value": "Sie wurden erfolgreich eingeloggt.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/message/edit_message/{{$message_key}}",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"message",
+								"edit_message",
+								"{{$message_key}}"
+							]
+						},
+						"description": "Bearbeitet Daten von genau einer Nachricht"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c36b0234-f580-481c-9377-55152fcf5d3c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "65393bfa-454b-47cd-807a-06e9458e9d11",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "/dashbaord/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								""
+							]
+						},
+						"description": "Gibt die Daten fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/most_used_drones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/most_used_drones",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"most_used_drones"
+							]
+						},
+						"description": "Gibt die meist genutzen Drohnen fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/flights_without_drones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/flights_without_drones",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"flights_without_drones"
+							]
+						},
+						"description": "Gibt die Flüge ohne Drohne fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/amount_drones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/amount_drones",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"amount_drones"
+							]
+						},
+						"description": "Gibt die Anzahl an Drohnen fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/longest_flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/longest_flight",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"longest_flight"
+							]
+						},
+						"description": "Gibt den Längsten Flug fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/flight_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/flight_data",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"flight_data"
+							]
+						},
+						"description": "Gibt die Flug Daten fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/flight_data_before",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/flight_data_before",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"flight_data_before"
+							]
+						},
+						"description": "Gibt die Flug Daten vor dem Heutigen Datum fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/flight_data_today",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/flight_data_today",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"flight_data_today"
+							]
+						},
+						"description": "Gibt die Flug Daten für den Heutigen fürs Dashboard zurück"
+					},
+					"response": []
+				},
+				{
+					"name": "/dashbaord/flight_data_after",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "session",
+									"value": "{{$session}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/dashboard/flight_data_after",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"dashboard",
+								"flight_data_after"
+							]
+						},
+						"description": "Gibt die Flug Daten nach dem Heutigen Tag fürs Dashboard zurück"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "index",
+			"item": [
+				{
+					"name": "/index/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email_adresse",
+									"value": "test@test.de",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/index/login",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"index",
+								"login"
+							]
+						},
+						"description": "Route um ein Benutzer in das System einzuloggen"
+					},
+					"response": [
+						{
+							"name": "failureLogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email_adresse",
+											"value": "test@test.de",
+											"type": "text"
+										},
+										{
+											"key": "passwort",
+											"value": "test",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/index/login",
+									"protocol": "https",
+									"host": [
+										"dronelog",
+										"mi",
+										"medien",
+										"hs-duesseldorf",
+										"de"
+									],
+									"path": [
+										"index.php",
+										"index",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 31 Jan 2019 12:56:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.7 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.3"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"data\": [],\n    \"message\": \"Sie konnten nicht eingeloggt werden. Versuchen Sie es später noch einmal.\"\n}"
+						},
+						{
+							"name": "successLogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email_adresse",
+											"value": "test@test.de",
+											"type": "text"
+										},
+										{
+											"key": "passwort",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/user/login/",
+									"protocol": "https",
+									"host": [
+										"dronelog",
+										"mi",
+										"medien",
+										"hs-duesseldorf",
+										"de"
+									],
+									"path": [
+										"index.php",
+										"user",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 10 Dec 2018 18:01:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.7 (Ubuntu)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.3"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"pilot_id\": \"1\",\n            \"profilbild\": \"/assets/images/muster_pb.png\",\n            \"email_adresse\": \"test@Test.de\",\n            \"passwort\": \"$2y$10$/4VawSmoFCq3YWgWZy9wGuftrKlETOFWI8vgCBp59aqfbRleMxK72\",\n            \"vorname\": \"   test\",\n            \"nachname\": \"test\",\n            \"studiengang\": \"set\",\n            \"rolle\": \"1\",\n            \"loeschberechtigung\": \"1\",\n            \"letzter_login\": \"2018-11-28 14:56:33\",\n            \"aktivitaet\": \"0\"\n        }\n    ],\n    \"message\": \"\",\n    \"session\": \"qe2sb8i5liou5fj18l701i00ata1in6c\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/index/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email_adresse",
+									"value": "deleteme@deletee.de",
+									"type": "text"
+								},
+								{
+									"key": "passwort",
+									"value": "postman",
+									"type": "text"
+								},
+								{
+									"key": "vorname",
+									"value": "Postman",
+									"type": "text"
+								},
+								{
+									"key": "nachname",
+									"value": "API",
+									"type": "text"
+								},
+								{
+									"key": "studiengang",
+									"value": "API",
+									"type": "text"
+								},
+								{
+									"key": "aktivitaet",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "testbild.jpg",
+									"type": "text"
+								},
+								{
+									"key": "profilbild",
+									"value": "bitstrom/datei",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/index/register",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"index",
+								"register"
+							]
+						},
+						"description": "Route zum Anlegen eines Benutzers"
+					},
+					"response": []
+				},
+				{
+					"name": "/index/password_reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mail",
+									"value": "deleteme@deletee.de",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dronelog.mi.medien.hs-duesseldorf.de/index.php/index/password_reset",
+							"protocol": "https",
+							"host": [
+								"dronelog",
+								"mi",
+								"medien",
+								"hs-duesseldorf",
+								"de"
+							],
+							"path": [
+								"index.php",
+								"index",
+								"password_reset"
+							]
+						},
+						"description": "Route zum zurücksetzen des passwortes eines Benutzers"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f3ecca2d-48fb-411c-b8e8-241cf80d596f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0a8e0281-576b-4805-b1b8-d0f42bf0bd75",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "dd3de827-ebf6-4094-90d2-bf2f1033977c",
+			"key": "id",
+			"value": "2",
+			"type": "string"
+		}
+	]
+}

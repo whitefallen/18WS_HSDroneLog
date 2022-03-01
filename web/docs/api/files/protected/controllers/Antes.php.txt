@@ -1,0 +1,28 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+ * Class Antes
+ * Verwaltet alle Requests und Responses für Antes
+ */
+class Antes extends CI_Controller
+{
+
+    /**
+     * Antes constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('User_model', 'user_model');
+    }
+
+    /**
+     * Antes Aktion für Antes/
+     */
+    public function index()
+    {
+        $this->load->view('antes.php');
+    }
+
+}
