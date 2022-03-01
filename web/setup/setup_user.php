@@ -8,10 +8,10 @@
     <link href="../assets/vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <title>Konfiguration</title>
 </head>
-<?php if($_SERVER['HTTPS'] === 'on') {
-    $prefix = "https://";
-} else {
-    $prefix = "http://";
+<?php 
+$prefix = "http://";
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+	$prefix = "https://";
 }
 ?>
 <body>
